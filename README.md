@@ -1,1 +1,1 @@
-# about
+[Начальная страница](https://mgrom-dev.github.io/about/)
