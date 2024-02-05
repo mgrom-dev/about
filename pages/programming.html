@@ -1,7 +1,9 @@
 <html>
 
 <head>
-    <title>Профессия программиста: кому подходит и какие есть перспективы</title>
+    <title>Профессия программиста</title>
+    <meta charset="UTF-8">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.css" rel="stylesheet">
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -82,79 +84,137 @@
             fill: #7A6BB5;
         }
 
-        @keyframes float {
-            0% {
-                box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
-                transform: translatey(0px);
-            }
-
-            50% {
-                box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.2);
-                transform: translatey(-20px);
-            }
-
-            100% {
-                box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
-                transform: translatey(0px);
-            }
+        .card-category-5 .all-pr-cards {
+            padding: 0;
         }
 
-        @-webkit-keyframes float {
-            0% {
-                box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
-                transform: translatey(0px);
-            }
-
-            50% {
-                box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.2);
-                transform: translatey(-20px);
-            }
-
-            100% {
-                box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
-                transform: translatey(0px);
-            }
+        .card-category-5 .per-card-3 {
+            width: 400px;
+            height: 240px;
+            margin: auto;
+            border-radius: 10px;
+            -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            -o-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
         }
 
-        @keyframes float {
-            0% {
-                box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
-                transform: translatey(0px);
-            }
-
-            50% {
-                box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.2);
-                transform: translatey(-20px);
-            }
-
-            100% {
-                box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
-                transform: translatey(0px);
-            }
+        .card-category-5 .per-card-3:hover .card-content .social-icons {
+            opacity: 1;
+            height: 100%;
         }
 
-        .avatar {
-            position: absolute;
-            top: 42px;
-            right: 23px;
-            z-index: 2;
-            width: 80px;
-            height: 80px;
-            box-sizing: border-box;
-            border: 4px #212121 solid;
-            border-radius: 50%;
-            overflow: hidden;
-            box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
-            transform: translatey(0px);
-            -webkit-animation: float 6s ease-in-out infinite;
-            animation: float 6s ease-in-out infinite;
+        .card-category-5 .per-card-3:hover .social-icons .card-btn {
+            bottom: 0px !important;
+
+            -webkit-animation: down-btn 1.5s;
+            -moz-animation: down-btn 1.5s;
+            -o-animation: down-btn 1.5s;
+            animation: down-btn 1.5s;
         }
 
-        .avatar img {
-            width: 100%;
-            height: auto;
+        .card-category-5 .per-card-3 .card-image {
             position: relative;
-            top: -18px;
+            background: linear-gradient(0deg, #264a49, transparent);
+            padding-left: 20px;
+            text-align: left;
+            border-radius: 10px 10px 0 0;
+        }
+
+        .card-category-5 .per-card-3 .card-image img {
+            height: 90px;
+            border-radius: 15px;
+            padding: 5px;
+            margin-right: 10px;
+        }
+
+        .card-category-5 .per-card-3 .card-image .per-name {
+            position: absolute;
+            top: 40%;
+            text-transform: uppercase;
+            letter-spacing: 7px;
+            font-size: 20px;
+            color: #fff;
+            text-shadow: 1px 1px black;
+        }
+
+        .card-category-5 .per-card-3 .card-content {
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            background: linear-gradient(180deg, #274b4a, transparent);
+        }
+
+        .card-category-5 .per-card-3 .card-content .per-position {
+            font-size: 22px;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            color: #009688;
+            text-shadow: 1px 1px black;
+        }
+
+        .card-category-5 .per-card-3 .card-content .card-text {
+            padding: 10px;
+        }
+
+        .card-category-5 .per-card-3 .card-content .card-text span {
+            font-size: 13px;
+            color: #ffffff;
+            text-shadow: 1px 1px black;
+            color: #cdcbcb;
+        }
+
+        .card-category-5 .per-card-3 .card-content .social-icons {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            left: 0;
+            opacity: 0;
+            height: 0%;
+            background: #264f4d;
+            border-top: 1px solid #5eada5;
+            cursor: pointer;
+
+            -webkit-transition: all 0.5s ease-in-out;
+            -moz-transition: all 0.5s ease-in-out;
+            -o-transition: all 0.5s ease-in-out;
+            transition: all 0.5s ease-in-out;
+        }
+
+        .card-category-5 .per-card-3 .card-content .social-icons i {
+            margin: 15px;
+            font-size: 30px;
+            color: #fff;
+            cursor: pointer;
+
+            -webkit-transition: all 0.3s ease-in-out;
+            -moz-transition: all 0.3s ease-in-out;
+            -o-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .card-category-5 .per-card-3 .card-content .social-icons i:hover {
+            -webkit-transform: scale(2);
+            -moz-transform: scale(2);
+            -o-transform: scale(2);
+            transform: scale(2);
+        }
+
+        .card-category-5 .per-card-3 .card-content .social-icons .card-btn {
+            position: absolute;
+            bottom: 10px;
+            text-align: center;
+            width: 100%;
+        }
+
+        .card-category-5 .per-card-3 .card-content .social-icons .card-btn button {
+            cursor: pointer;
+            width: 100%;
+            padding: 15px;
+            font-size: 18px;
+            color: #fff;
+            background: #03695f;
+            border: none;
         }
     </style>
 </head>
@@ -237,15 +297,9 @@
         </svg>
     </div>
     <main>
-        <div class="avatar">
-            <a href="https://vk.com/mgrom_dev">
-                <img src="src\profile.png" alt="mgrom_dev" />
-            </a>
-        </div>
         <div class="crop-container">
             <img src="src\neirocity.jpeg">
         </div>
-
         <h2>Будущая профессия</h2>
         <p>
             Цифровая эпоха диктует новые требования к профессиям. Программирование — одна из самых перспективных и
@@ -460,6 +514,31 @@
             свою
             работу не потому, что ожидают оплаты или признания, а потому что получают удовольствие от программирования.
         </p>
+        <div class="card-category-5">
+
+            <div class="per-card-3">
+                <div class="card-image">
+                    <img src="src\profile.png" />
+                    <span class="per-name">MAXIM GROMOV</span>
+                </div>
+
+                <div class="card-content">
+                    <span class="per-position">full stack developer</span>
+                    <div class="card-text">
+                        <span>Skills = {<span style="color: #3498db;">Front-end: ["JS", "HTML", "CSS", "jQuery", "Figma"],</span> <span style="color: #27ae60;">Back-end: ["C#", "Python", "JAVA", "Spring Framework", "PHP"],</span>  <span style="color: #f39c12;">Databases: ["MySQL", "PostgreSQL", "SQLite", "MongoDB", "Redis"],</span> <span style="color: #e74c3c;">Version-control: ["Git", "GitHub"]</span>}</span>
+                    </div>
+                    <div class="social-icons">
+                        <a href="https://t.me/mgrom_dev" target="_blank"><i class="fab fa-telegram" title="Telegram"></i></a>
+                        <a href="https://vk.com/mgrom_dev" target="_blank"><i class="fab fa-vk" title="VK"></i></a>
+                        <a href="mailto:mgromDev@yandex.ru" target="_blank"><i class="far fa-envelope" title="E-Mail"></i></a>
+                        <a href="https://github.com/mgrom-dev" target="_blank"><i class="fab fa-github" title="GitHub"></i></a>
+                        <div class="card-btn">
+                            <button type="button" title="Connect">Connect</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
 </body>
 <script src="src/TweenLite.min.js"></script>
