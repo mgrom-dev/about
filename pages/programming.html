@@ -3,6 +3,7 @@
 <head>
     <title>Профессия программиста</title>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.css" rel="stylesheet">
     <style>
         body {
@@ -14,11 +15,14 @@
 
         main {
             position: relative;
-            max-width: 800px;
-            margin: 50px auto;
-            padding: 20px;
+            max-width: 80%;
+            width: 1000px;
+            margin: 7% auto;
+            padding: 2%;
             border: 2px solid #3498db78;
             border-radius: 10px;
+            background: url(src/neirocity.jpeg) top center fixed;
+            background-size: 60vmax;
             background-color: #d9d9d9a3;
             box-shadow: 7px 7px 26px 0px rgb(44 122 119 / 77%);
         }
@@ -26,12 +30,18 @@
         h2 {
             color: #2c3e50;
             padding: 10px;
-            border-radius: 5px;
+            border-radius: 10px;
+            font-size: 2.2vh;
+            background-color: #4ab0ffa1;
         }
 
         p {
             color: #34495e;
-            line-height: 1.6;
+            line-height: 1.5;
+            font-size: 1.7vh;
+            background-color: #dee8dbcf;
+            padding: 10px;
+            border-radius: 10px;
         }
 
         .crop-container {
@@ -44,6 +54,7 @@
         .crop-container img {
             margin-top: -200px;
             height: 500%;
+            width: 100%;
             opacity: 0.7;
         }
 
@@ -89,8 +100,6 @@
         }
 
         .card-category-5 .per-card-3 {
-            width: 400px;
-            height: 240px;
             margin: auto;
             border-radius: 10px;
             -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -99,43 +108,50 @@
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
         }
 
-        .card-category-5 .per-card-3:hover .card-content .social-icons {
-            opacity: 1;
-            height: 100%;
-        }
-
-        .card-category-5 .per-card-3:hover .social-icons .card-btn {
-            bottom: 0px !important;
-
-            -webkit-animation: down-btn 1.5s;
-            -moz-animation: down-btn 1.5s;
-            -o-animation: down-btn 1.5s;
-            animation: down-btn 1.5s;
-        }
-
         .card-category-5 .per-card-3 .card-image {
             position: relative;
             background: linear-gradient(0deg, #264a49, transparent);
-            padding-left: 20px;
+            padding-left: 10px;
             text-align: left;
             border-radius: 10px 10px 0 0;
+            white-space: nowrap;
+        }
+
+        .textcols-item {
+            white-space: normal;
+            display: inline-block;
+            vertical-align: middle;
         }
 
         .card-category-5 .per-card-3 .card-image img {
-            height: 90px;
+            height: 15vh;
             border-radius: 15px;
             padding: 5px;
             margin-right: 10px;
         }
 
         .card-category-5 .per-card-3 .card-image .per-name {
-            position: absolute;
-            top: 40%;
             text-transform: uppercase;
-            letter-spacing: 7px;
-            font-size: 20px;
-            color: #fff;
-            text-shadow: 1px 1px black;
+            font-size: 2.5vh;
+            letter-spacing: 4px;
+            overflow: hidden;
+            background: linear-gradient(90deg, #11efd5, #fff, #0e41aa);
+            background-repeat: no-repeat;
+            background-size: 80%;
+            animation: animate2 3s linear infinite;
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: rgba(255, 255, 255, 0);
+        }
+
+        @keyframes animate2 {
+            0% {
+                background-position: -500%;
+            }
+
+            100% {
+                background-position: 500%;
+            }
         }
 
         .card-category-5 .per-card-3 .card-content {
@@ -145,8 +161,9 @@
             background: linear-gradient(180deg, #274b4a, transparent);
         }
 
-        .card-category-5 .per-card-3 .card-content .per-position {
-            font-size: 22px;
+        .per-position {
+            font-size: 1.8vh;
+            display: block;
             text-transform: uppercase;
             letter-spacing: 4px;
             color: #009688;
@@ -158,63 +175,34 @@
         }
 
         .card-category-5 .per-card-3 .card-content .card-text span {
-            font-size: 13px;
+            font-size: 1.5vh;
             color: #ffffff;
             text-shadow: 1px 1px black;
             color: #cdcbcb;
         }
 
-        .card-category-5 .per-card-3 .card-content .social-icons {
-            position: absolute;
-            top: 0;
+        .social-icons {
             width: 100%;
-            left: 0;
-            opacity: 0;
-            height: 0%;
-            background: #264f4d;
             border-top: 1px solid #5eada5;
-            cursor: pointer;
-
-            -webkit-transition: all 0.5s ease-in-out;
-            -moz-transition: all 0.5s ease-in-out;
-            -o-transition: all 0.5s ease-in-out;
-            transition: all 0.5s ease-in-out;
+            margin-top: 10px;
+            color: white;
+            animation: blink 2s linear infinite;
+            transition: text-shadow;
+            text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #0073e6, 0 0 20px #0073e6,
+                0 0 25px #0073e6, 0 0 30px #0073e6, 0 0 35px #0073e6;
         }
 
-        .card-category-5 .per-card-3 .card-content .social-icons i {
+        @keyframes blink {
+            50% {
+                opacity: 0.5;
+            }
+        }
+
+        .social-icons i {
             margin: 15px;
-            font-size: 30px;
+            font-size: 5vh;
             color: #fff;
             cursor: pointer;
-
-            -webkit-transition: all 0.3s ease-in-out;
-            -moz-transition: all 0.3s ease-in-out;
-            -o-transition: all 0.3s ease-in-out;
-            transition: all 0.3s ease-in-out;
-        }
-
-        .card-category-5 .per-card-3 .card-content .social-icons i:hover {
-            -webkit-transform: scale(2);
-            -moz-transform: scale(2);
-            -o-transform: scale(2);
-            transform: scale(2);
-        }
-
-        .card-category-5 .per-card-3 .card-content .social-icons .card-btn {
-            position: absolute;
-            bottom: 10px;
-            text-align: center;
-            width: 100%;
-        }
-
-        .card-category-5 .per-card-3 .card-content .social-icons .card-btn button {
-            cursor: pointer;
-            width: 100%;
-            padding: 15px;
-            font-size: 18px;
-            color: #fff;
-            background: #03695f;
-            border: none;
         }
     </style>
 </head>
@@ -222,8 +210,8 @@
 <body>
     <div class="container">
         <svg class="background__lights" id="lines" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
-            xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewbox="0 0 1920 1080" xml:space="preserve"
-            preserveAspectRatio="none">
+            xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100%" height="100%" viewbox="0 0 1920 1080"
+            xml:space="preserve" preserveAspectRatio="none">
             <g class="lines">
                 <rect class="line" x="1253.6" width="4.5" height="1080"></rect>
                 <rect class="line" x="873.3" width="1.8" height="1080"></rect>
@@ -245,7 +233,7 @@
             </g>
             <g class="lights">
                 <path class="light1 light"
-                    d="M619.5,298.4H615v19.5h4.5V298.4z M619.5,674.8H615v9.8h4.5V674.8z M619.5,135.1H615v5.6h4.5V135.1z         M619.5,55.5H615v68.7h4.5V55.5z">
+                    d="M619.5,298.4H615v19.5h4.5V298.4z M619.5,674.8H615v9.8h4.5V674.8z M619.5,135.1H615v5.6h4.5V135.1z M619.5,55.5H615v68.7h4.5V55.5z">
                 </path>
                 <path class="light2 light"
                     d="M1258.2,531.9h-4.5v8.1h4.5V531.9z M1258.2,497.9h-4.5v17.9h4.5V497.9z M1258.2,0h-4.5v25.3h4.5V0z         M1258.2,252.2h-4.5v42.4h4.5V252.2z">
@@ -297,9 +285,6 @@
         </svg>
     </div>
     <main>
-        <div class="crop-container">
-            <img src="src\neirocity.jpeg">
-        </div>
         <h2>Будущая профессия</h2>
         <p>
             Цифровая эпоха диктует новые требования к профессиям. Программирование — одна из самых перспективных и
@@ -518,22 +503,33 @@
 
             <div class="per-card-3">
                 <div class="card-image">
-                    <img src="src\profile.png" />
-                    <span class="per-name">MAXIM GROMOV</span>
+                    <div class="textcols-item">
+                        <img src="src\animated_avatar.gif" />
+                    </div>
+                    <div class="textcols-item">
+                        <span class="per-name">MAXIM GROMOV</span>
+                        <span class="per-position">full stack developer</span>
+                        <span class="per-position" style="color: #3498db;">front-end</span>
+                        <span class="per-position" style="color: #d8ff00;">back-end</span>
+                        <span class="per-position" style="color: #f39c12;">database</span>
+                    </div>
                 </div>
 
                 <div class="card-content">
-                    <span class="per-position">full stack developer</span>
                     <div class="card-text">
-                        <span>Skills = {<span style="color: #3498db;">Front-end: ["JS", "HTML", "CSS", "jQuery", "Figma"],</span> <span style="color: #27ae60;">Back-end: ["C#", "Python", "JAVA", "Spring Framework", "PHP"],</span>  <span style="color: #f39c12;">Databases: ["MySQL", "PostgreSQL", "SQLite", "MongoDB", "Redis"],</span> <span style="color: #e74c3c;">Version-control: ["Git", "GitHub"]</span>}</span>
-                    </div>
-                    <div class="social-icons">
-                        <a href="https://t.me/mgrom_dev" target="_blank"><i class="fab fa-telegram" title="Telegram"></i></a>
-                        <a href="https://vk.com/mgrom_dev" target="_blank"><i class="fab fa-vk" title="VK"></i></a>
-                        <a href="mailto:mgromDev@yandex.ru" target="_blank"><i class="far fa-envelope" title="E-Mail"></i></a>
-                        <a href="https://github.com/mgrom-dev" target="_blank"><i class="fab fa-github" title="GitHub"></i></a>
-                        <div class="card-btn">
-                            <button type="button" title="Connect">Connect</button>
+                        <span>Skills = {<span style="color: #3498db;">Front-end: ["JS", "HTML", "CSS", "jQuery",
+                                "Figma"],</span> <span style="color: #27ae60;">Back-end: ["C#", "Python", "JAVA",
+                                "Spring Framework", "PHP"],</span> <span style="color:#d8ff00;">Databases: ["MySQL",
+                                "PostgreSQL", "SQLite", "MongoDB", "Redis"],</span> <span
+                                style="color: #e74c3c;">Version-control: ["Git", "GitHub"]</span>}</span>
+                        <div class="social-icons">
+                            <a href="https://t.me/mgrom_dev" target="_blank"><i class="fab fa-telegram"
+                                    title="Telegram"></i></a>
+                            <a href="https://vk.com/mgrom_dev" target="_blank"><i class="fab fa-vk" title="VK"></i></a>
+                            <a href="mailto:mgromDev@yandex.ru" target="_blank"><i class="far fa-envelope"
+                                    title="E-Mail"></i></a>
+                            <a href="https://github.com/mgrom-dev" target="_blank"><i class="fab fa-github"
+                                    title="GitHub"></i></a>
                         </div>
                     </div>
                 </div>
